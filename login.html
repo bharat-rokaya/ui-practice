@@ -13,8 +13,11 @@
             <h1 class="font-semibold text-2xl text-center text-gray-600">User Login</h1>
 
             <input type="text" class="w-full text-md outline outline-gray-500 rounded-md focus:outline-blue-600 my-6 px-2 py-1 focus:outline" placeholder="Username">
-
-            <input type="password" class="w-full text-md outline outline-gray-500 rounded-md focus:outline-blue-600 px-2 py-1 focus:outline" placeholder="Password">
+            
+            <div class="relative">
+                <input type="password" id="password" class="w-full text-md outline outline-gray-500 rounded-md focus:outline-blue-600 px-2 py-1 focus:outline" placeholder="Password">
+                <i id="show" class="fa-solid hidden fa-eye-slash absolute right-4 top-[50%] translate-y-[-50%] cursor-pointer text-gray-600"></i>
+            </div>
 
             <button class="w-full text-md bg-blue-500 text-white cursor-pointer py-1 rounded-md mt-6 mb-4 hover:bg-blue-600 transition-all duration-300 ease hover:scale-103">Login</button>
 
@@ -24,5 +27,23 @@
         <div>
         </div>
     </section>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const showPassword = document.getElementById('show');
+
+        showPassword.addEventListener('click', () => {
+            if(passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPassword.classList.remove('fa-eye-slash');
+                showPassword.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                showPassword.classList.remove('fa-eye');
+                showPassword.classList.add('fa-eye-slash');
+            }
+        });
+
+    </script>
 </body>
 </html>
