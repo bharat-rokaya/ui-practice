@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-blue-100 flex items-center justify-center h-screen">
-    <section class="bg-white p-6 w-auto flex h-auto rounded-xl shadow-lg gap-8">
-        <div class="flex flex-col">
-            <input type="text" class="outline-none border-b-[1.4px] border-gray-600"  placeholder="Email">
+    <section class="bg-white w-[300px] flex h-auto rounded-xl shadow-lg">
+        <div class="px-6 py-6 w-full flex flex-col">
+            <h1 class="font-semibold text-2xl text-center text-gray-600">User Login</h1>
 
-            <input type="password" class="outline-none border-b-[1.4px] border-gray-600 mt-4" placeholder="Password">
+            <input type="text" class="w-full text-md outline outline-gray-500 rounded-md focus:outline-blue-600 my-6 px-2 py-1 focus:outline" placeholder="Username">
 
-            <button class="bg-blue-500 text-white py-1 rounded-md mt-6 mb-4">Login</button>
+            <input type="password" class="w-full text-md outline outline-gray-500 rounded-md focus:outline-blue-600 px-2 py-1 focus:outline" placeholder="Password">
 
-            <p>Don't have an account? <a href="#" class="text-blue-500">Sign up</a></p>
+            <button class="w-full text-md bg-blue-500 text-white cursor-pointer py-1 rounded-md mt-6 mb-4 hover:bg-blue-600 transition-all duration-300 ease hover:scale-103">Login</button>
+
+            <p class="text-sm text-center text-gray-600">Don't have an account? <a href="#" class="text-blue-600 hover:underline">Sign up</a></p>
         </div>
 
         <div>
